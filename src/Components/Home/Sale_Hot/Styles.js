@@ -1,0 +1,45 @@
+import {StyleSheet} from 'react-native'
+export const styles = StyleSheet.create({
+    Container:{
+        width:'90%',
+        backgroundColor:'#fff',
+        margin:18,
+        height:300,
+        padding:10,
+    },
+    Card:{
+        flexDirection:'row',
+    },
+    Text:{
+        color:'red',
+        fontWeight:'bold',
+        fontSize:20,
+        backgroundColor:'yellow',
+        borderColor:'yellow',
+        borderRadius:20,
+        height:40,
+        width:230,
+        textAlign:'center',
+        padding:5,
+        bottom:20,
+        left:60
+    },
+    Container2:{
+        borderColor:'red',
+        borderRadius:5,
+        width:151,
+        height:186,
+        backgroundColor:'#fff',
+        marginLeft:10
+    },
+    image:{
+        width:'100%',
+        height:'90%'
+    },
+    imageChildrent:{
+        width:'70%',
+        height:'60%',
+        bottom:140,
+        left:20
+    }
+})
