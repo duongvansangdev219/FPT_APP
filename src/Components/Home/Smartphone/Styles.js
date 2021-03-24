@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
         width:'90%',
         borderRadius:5,
         margin:20,
-        height:700,
+        height:800,
         backgroundColor:'#fff'
     },
     Text:{
@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
         width:'50%',
         paddingLeft:10,
         marginTop:10,
-        height:300,
+        height:350,
     },
     images:{
         width:160,

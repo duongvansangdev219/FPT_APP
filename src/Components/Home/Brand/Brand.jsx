@@ -1,24 +1,25 @@
-import React,{useContext} from 'react'
+import React, {useContext, useEffect,useState} from 'react'
 import {Text,Image, View } from 'react-native'
 import {styles} from './Styles'
 import {BrandContext} from '../../../Context/Brands';
 import {Category} from '../../../../CategoryData';
+import Axios from 'axios'
 const Brand = () => {
-  const brands = useContext(BrandContext); 
+  // const brands = useContext(BrandContext); 
     return (
         <View style={styles.brand}>
-                  {brands.map((brands,index)=>{                
-                  return <ListBrand key={brands._id}{...brands}/>
+                  {Category.map((brands,index)=>{                
+                  return <ListBrand key={brands.id}{...brands}/>
                 })}
         </View>  
     )
 }
-const ListBrand=({brand_name,image})=>{
+const ListBrand=({name,images})=>{
   return (
       <View>                        
            <View style={styles.brand2}>
                <Image 
-              source={{uri:`${image}`}}
+              source={{uri:`${images}`}}
               style={{
                   width:29,
                   height:30,
@@ -31,7 +32,7 @@ const ListBrand=({brand_name,image})=>{
                left:30,
                width:80,
                color:'red'
-           }}>{brand_name}</Text>
+           }}>{name}</Text>
       </View>
   )
 }

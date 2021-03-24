@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View,Image } from 'react-native'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 const ImageProduct = ({route}) => {
+    
     return (
         <View>
             <Text style={{marginLeft:10,fontWeight:'bold'}}>{route.params.products.name}</Text>
@@ -15,7 +16,7 @@ const ImageProduct = ({route}) => {
 
                     <Image
                         style={styles.tinyLogo}
-                        source={{uri:route.params.products.image}}/>
+                        source={{uri:route.params.products.images}}/>
                     <View style={styles.textContainer}>
                         <View>
                             <Text style={styles.prices}>{route.params.products.price}</Text>
@@ -41,7 +42,8 @@ const styles = StyleSheet.create({
     tinyLogo: {
         width: 350,
         height:350,
-        marginLeft:25
+        marginLeft:25,
+        marginTop:40
     },
     textContainer:{
         marginTop:20,

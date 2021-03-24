@@ -1,45 +1,69 @@
 import {StyleSheet} from 'react-native'
 export const styles = StyleSheet.create({
     Container:{
-        width:'90%',
         backgroundColor:'#fff',
-        margin:18,
-        height:300,
+        margin:10,
+        height:400,
         padding:10,
     },
     Card:{
         flexDirection:'row',
     },
     Text:{
-        color:'red',
+        color:'#cd1817',
         fontWeight:'bold',
         fontSize:20,
-        backgroundColor:'yellow',
-        borderColor:'yellow',
-        borderRadius:20,
         height:40,
         width:230,
-        textAlign:'center',
+        textAlign:'left',
         padding:5,
-        bottom:20,
-        left:60
     },
     Container2:{
-        borderColor:'red',
+        width:'50%',
+        paddingLeft:10,
+        marginTop:10,
+        height:300,
+    },
+    images:{
+        width:160,
+        height:170
+    },
+    installment:{
+        bottom:50,
+        width:80,
+        height:20,
+        color:'#fff',
         borderRadius:5,
-        width:151,
-        height:186,
-        backgroundColor:'#fff',
-        marginLeft:10
+        textAlign:'center',
+        backgroundColor:'#FF8000'
     },
-    image:{
-        width:'100%',
-        height:'90%'
+    nameProduct:{
+        fontSize:15,
+        fontWeight:'bold',
+        color:'#424242',
+        bottom:25
     },
-    imageChildrent:{
-        width:'70%',
-        height:'60%',
-        bottom:140,
-        left:20
+    prices:{
+        bottom:10,
+        fontWeight:'bold',
+        width:100,
+        height:20,
+        color:'#fff',
+        borderRadius:10,
+        textAlign:'center',
+        backgroundColor:'#cd1817'
+    },
+    lucky:{
+        bottom:40,
+        width:125,
+        height:20,
+        color:'#fff',
+        borderRadius:5,
+        textAlign:'center',
+        backgroundColor:'#cd1817'
+    },
+    discount:{
+        textDecorationLine:'line-through',
+        color:'#585858',
     }
 })

@@ -3,7 +3,9 @@ export const styles = StyleSheet.create({
     brand:{
       flexWrap:'wrap',
       flexDirection:'row',
-      paddingLeft:21,
+      paddingLeft:13,
+      backgroundColor:'#fff',
+      margin:10
     },
     brand2:{
       width:70,

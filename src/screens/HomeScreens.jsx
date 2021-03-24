@@ -1,10 +1,8 @@
 import React from 'react'
 import {StyleSheet,View,Button,ScrollView} from 'react-native'
-import Input from '../Components/Layout/Input';
 import Footer from '../Components/Layout/Footer';
 import Header from '../Components/Layout/Header';
 import Laptop from '../Components/Home/Laptop/Laptop';
-import Banner from '../Components/Home/Banner/Banner';
 import Banner_2 from '../Components/Home/Banner/Banner_2';
 import Brand from '../Components/Home/Brand/Brand';
 import Information_Hot from '../Components/UI/Information_Hot';
@@ -19,8 +17,6 @@ const Home = ({navigation}) => {
         <View style={styles.Container}>
             <ScrollView style={styles.scrollView}>   
                 <Header/>
-                <Input/>
-                <Banner/>
                 <Banner_2/>
                 <Brand/>
                 <ProductSale/>
@@ -44,6 +40,6 @@ const styles = StyleSheet.create({
         backgroundColor:"#fff"
     },
     scrollView: {
-        backgroundColor: 'pink',
+        backgroundColor: '#EEEEEE',
       },
 })

@@ -3,6 +3,8 @@ import * as React from 'react';
 import {BrandContextProvider} from './src/Context/Brands';
 import {ProductsContextProvider} from './src/Context/Products';
 import AppNavContainer from './src/Navigations/index';
+import store from './src/Redux/Store';
+import { Provider } from 'react-redux';
 
 const globalScreenOptions={
   headerStyle:{backgroundColor:"#2C6BED"},
@@ -11,13 +13,13 @@ const globalScreenOptions={
 }
 const App = () =>{
   return (
-    // <Provider store={store}>
-      <BrandContextProvider>
+    <Provider store={store}>
+       <BrandContextProvider>
         <ProductsContextProvider>
             <AppNavContainer></AppNavContainer> 
         </ProductsContextProvider>   
-      </BrandContextProvider>
-    // </Provider>
+       </BrandContextProvider>
+     </Provider>
   )
 }
 export default App;

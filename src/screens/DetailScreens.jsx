@@ -3,23 +3,30 @@ import { StyleSheet, Text, View,ScrollView,Image, Button,Alert  } from 'react-na
 import { CheckBox ,Card } from 'react-native-elements'
 import Footer from '../Components/Layout/Footer';
 import Header from '../Components/Layout/Header'
-import Input from '../Components/Layout/Input'
 import ImageProduct from '../Components/Detail/ImageProduct';
 import Evaluate from '../Components/Detail/Evaluate'
 import {RadioButton} from 'react-native-paper';
 import {CART} from '../Navigations/constants/RouterNames';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation,CommonActions } from '@react-navigation/native';
+import { addToCart } from '../Redux/Action/CartAction';
+import { useDispatch } from 'react-redux';
 
 const Detail = (route) => {
-    const [Price, setPrice] = useState()
     const [checked,setchecked] = useState('first')
     const [Ram, setRam] = useState('first')
-    const {navigate} = useNavigation()
+    const navigation = useNavigation();
+
+    const dispatch = useDispatch()
+    const addToCartHandler=()=>{
+        dispatch(addToCart(route.route.params.products.id))
+        navigation.navigate(CART)
+    }
+    console.log(route.route.params.products.id)
+   
     return (
         <View style={styles.Container}>
             <ScrollView style={styles.scrollView}>
                 <Header/>
-                <Input/>
                 <View>                 
                 <ImageProduct {...route}/>
                     <View style={{flexDirection:'row',justifyContent:'space-between'}}>
@@ -31,7 +38,7 @@ const Detail = (route) => {
                                 title='' uncheckedIcon='circle-o'/>   
                                 <View>
                                     <Text style={{top:8}}>64GB</Text>  
-                                    <Text style={{top:8}}></Text>                                  
+                                    <Text style={{top:8}}>28.990.000</Text>                                  
                                 </View>                    
                         </View> 
                         <View style={{flexDirection:'row'}}>
@@ -100,7 +107,7 @@ const Detail = (route) => {
                             <Text>Tặng bảo hành 2 năm chính hãng áp dụng đến 18/2</Text>               
                         </Card>                  
                     </View>
-                    <Button title="MUA NGAY" color="red" onPress={() =>{navigate(CART)}}/>
+                    <Button title="MUA NGAY" color="red" onPress={() => addToCartHandler()} />
                     <View style={styles.buttonx}>
                         <Button title="TRẢ GÓP 0%" color="#0000FF"/>
                         <Button title="TRẢ GÓP QUA THẺ" color="#0000FF"/>
