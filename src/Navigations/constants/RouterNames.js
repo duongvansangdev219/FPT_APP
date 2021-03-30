@@ -3,6 +3,7 @@ export const DETAIL = 'DETAIL';
 export const CART = 'CART';
 export const PROFILE = 'PROFILE'; 
 export const SIGN_IN = 'SIGN_IN';
+export const HEADER = 'HEADER';
 export const REGISTER = 'REGISTER';
 export const CONTACT = 'CONTACT';
 export const SMARTPHONES = 'SMARTPHONES';

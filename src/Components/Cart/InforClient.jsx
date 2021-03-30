@@ -30,18 +30,7 @@ const InforClient = () => {
                     }}/>
                 <Text>Chi tiết đơn hàng sẽ gửi vào email</Text>
             </View>
-            <View style={styles.money}>
-                <View>  
-                    <Text>Tạm tính:</Text>
-                    <Text>Khuyến mãi:</Text>
-                    <Text style={styles.text}>Tổng tiền:</Text>
-                </View>   
-                <View>  
-                    <Text>70.000.0000 đ</Text>
-                    <Text>-3.6000.000 đ</Text>
-                    <Text style={styles.text}>66.589.000 đ</Text>
-                </View>            
-            </View>
+            
             <Button title="TIẾP TỤC" color="red" />
             <Button title="ĐẶT HÀNG LUÔN" style={{marginTop:20}}/>
         </View>
@@ -59,26 +48,12 @@ const styles = StyleSheet.create({
         padding:10,
         backgroundColor:'#fff',
     },
-    money:{
-        flexDirection:'row',
-        justifyContent:'space-between',
-        width:'100%',
-        height:120,
-        marginTop:7,
-        marginBottom:5, 
-        padding:10,
-        backgroundColor:'#fff',
-    },
     inforClient:{
         color:'red',
         fontWeight:'bold',
         fontSize:16
     },
-    text:{
-        color:'black',
-        fontWeight:'bold',
-        marginTop:10
-    },
+   
     input:{
         height: 40,
         borderColor: 'gray',

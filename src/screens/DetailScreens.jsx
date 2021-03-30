@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { StyleSheet, Text, View,ScrollView,Image, Button,Alert  } from 'react-native'
+import { StyleSheet, Text, View,ScrollView,Image, Button  } from 'react-native'
 import { CheckBox ,Card } from 'react-native-elements'
 import Footer from '../Components/Layout/Footer';
 import Header from '../Components/Layout/Header'
@@ -7,21 +7,21 @@ import ImageProduct from '../Components/Detail/ImageProduct';
 import Evaluate from '../Components/Detail/Evaluate'
 import {RadioButton} from 'react-native-paper';
 import {CART} from '../Navigations/constants/RouterNames';
-import { useNavigation,CommonActions } from '@react-navigation/native';
-import { addToCart } from '../Redux/Action/CartAction';
-import { useDispatch } from 'react-redux';
+import { useNavigation } from '@react-navigation/native';
+
 
 const Detail = (route) => {
     const [checked,setchecked] = useState('first')
     const [Ram, setRam] = useState('first')
+   
     const navigation = useNavigation();
+    const productsID=route.route.params.products._id
+    // console.log(productsID)
 
-    const dispatch = useDispatch()
-    const addToCartHandler=()=>{
-        dispatch(addToCart(route.route.params.products.id))
-        navigation.navigate(CART)
+  
+    const addToCartHandler=()=>{      
+        navigation.push(CART,{productsID})
     }
-    console.log(route.route.params.products.id)
    
     return (
         <View style={styles.Container}>

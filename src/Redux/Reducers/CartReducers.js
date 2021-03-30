@@ -12,16 +12,14 @@ export const cartReducers = (state = { cartItems:[]},action)=>{
             };
         }else{
             return { 
-                ...state,
-                cartItems:[...state.cartItems.item],
-            };
+                ...state, cartItems: [...state.cartItems,items]};
         }
         case REMOVE_FROM_CART:
             return {
                 ...state,
-                cartItems:state.cartItems.filter((x)=>x.products !== action.payload)
+                cartItems:state.cartItems.filter((x)=> x.products !== action.payload)
             }
         default:
             return state;
-    }
+    }   
 }

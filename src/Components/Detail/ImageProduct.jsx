@@ -16,7 +16,7 @@ const ImageProduct = ({route}) => {
 
                     <Image
                         style={styles.tinyLogo}
-                        source={{uri:route.params.products.images}}/>
+                        source={{uri:route.params.products.image}}/>
                     <View style={styles.textContainer}>
                         <View>
                             <Text style={styles.prices}>{route.params.products.price}</Text>
