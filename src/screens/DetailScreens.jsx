@@ -16,7 +16,7 @@ const Detail = (route) => {
    
     const navigation = useNavigation();
     const productsID=route.route.params.products._id
-    // console.log(productsID)
+    console.log(productsID)
 
   
     const addToCartHandler=()=>{      

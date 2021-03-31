@@ -11,6 +11,7 @@ const Cart = ({route}) => {
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cart)
     const {cartItems} = cart;
+    console.log(cart)
 
     const productsID = route.params.productsID;
     console.log(productsID)

@@ -9,8 +9,8 @@ const Items = (items) => {
     const{price,image,name,productsID}=items
     // const [expanded, setExpanded] = React.useState(true);
     // const handlePress = () => setExpanded(!expanded);
-    const HandleRemoveCart=(productsID)=>{
-        dispatch(removeFromCart(productsID))
+    const HandleRemoveCart=(items)=>{
+        dispatch(removeFromCart(items))
     }
     return (
             <View style={styles.ContainerItems}>
